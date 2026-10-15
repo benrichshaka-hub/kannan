@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support & Help Desk | SmolderSwipe Adult Dating</title>
+    <meta name="description" content="Contact SmolderSwipe Customer Support, view company details, and create your free adult dating account.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-section {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 1rem 60px;
+        }
+
+        .support-section {
+            padding: 4rem 0 6rem;
+            background: var(--color-surface-dark);
+            border-top: 2px solid #FFFFFF;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+            text-align: left;
+        }
+
+        .support-card {
+            background: var(--color-surface-card);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .support-channel-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .support-channel-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-flame-subtle);
+            border: 2px solid #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .auth-container {
+            display: flex;
+            background: var(--color-surface-card);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            width: 100%;
+            max-width: 980px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .auth-image {
+            flex: 1.1;
+            display: block;
+            position: relative;
+            z-index: 2;
+            min-height: 520px;
+        }
+
+        .auth-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-card {
+            flex: 1;
+            padding: 3rem 2.5rem;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .auth-image {
+                display: none;
+            }
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            margin: 1.25rem 0;
+            text-align: left;
+        }
+
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+            margin-top: 3px;
+            accent-color: var(--color-ember-orange);
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.4;
+            cursor: pointer;
+        }
+
+        .contact-grid-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .image-card {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            height: 440px;
+            transition: var(--transition);
+        }
+
+        .image-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: var(--glow-neon-white);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header (White Background) -->
+    <nav id="navbar" class="sticky-nav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                <div class="brand-info">
+                    <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                    <span class="brand-tagline">FIND YOUR SPARK</span>
+                </div>
+            </a>
+            
+            <div class="age-badge">
+                <span class="pulse-dot"></span>
+                <span>18+ ADULT DATING</span>
+            </div>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle Navigation" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html" class="btn btn-ember btn-sm active">Join Free 🔥</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="auth-section">
+            <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="auth-container fade-in">
+                    <!-- Featured Sign-Up Image -->
+                    <div class="auth-image">
+                        <img src="assets/2.png" alt="Sign Up Preview - SmolderSwipe">
+                        <div style="position: absolute; bottom: 20px; left: 20px; z-index: 3; color: #FFF;">
+                            <span class="tag-pill" style="background: rgba(255,61,0,0.85); font-weight: 800;">⚡ Join 250,000+ Members</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-card">
+                        <h2 class="display-text" style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">
+                            Create Your <span class="gradient-text">Account</span>
+                        </h2>
+                        <p style="color: var(--color-text-muted); margin-bottom: 1.75rem; font-size: 0.95rem;">
+                            Join the SmolderSwipe adult dating community. Fast, free & discreet.
+                        </p>
+
+                        <form id="signupForm" action="index.html" method="POST">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="fname" class="form-control" placeholder="First" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" id="lname" class="form-control" placeholder="Last" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" class="form-control" placeholder="At least 8 characters" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dob">Date of Birth (Must be 18+)</label>
+                                <input type="date" id="dob" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="intent">Primary Dating Intent</label>
+                                <select id="intent" class="form-control" required>
+                                    <option value="">Select connection type</option>
+                                    <option value="hookup">Casual Encounters</option>
+                                    <option value="fwb">Friends with Benefits</option>
+                                    <option value="casual">Casual Dating & Nightlife</option>
+                                    <option value="open">Open to Anything</option>
+                                </select>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="ageCheck" required>
+                                <label for="ageCheck">
+                                    I confirm I am <strong>18 years of age or older</strong> and agree to the <a href="terms.html" style="color: var(--color-ember-orange);">Terms of Service</a> & <a href="privacy.html" style="color: var(--color-ember-orange);">Privacy Policy</a>.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-ember btn-large" style="width: 100%; margin-top: 0.5rem;">Create Free Account 🔥</button>
+                            
+                            <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+                                <span>Already have an account?</span> 
+                                <a href="login.html" style="color: var(--color-ember-orange); font-weight: 700; margin-left: 0.4rem;">Sign In</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Additional Image Showcase Section below form -->
+                <div style="margin-top: 4.5rem; width: 100%; max-width: 1150px;" class="text-center">
+                    <h3 class="display-text" style="font-size: 1.85rem; margin-bottom: 0.5rem;">Experience <span class="gradient-text">SmolderSwipe</span></h3>
+                    <p style="color: var(--color-text-muted); margin-bottom: 2.5rem;">Real members, exciting nightlife dates, and spontaneous local connections.</p>
+                    
+                    <div class="contact-grid-images">
+                        <div class="image-card white-glow-card">
+                            <img src="assets/8.png" alt="SmolderSwipe Community">
+                        </div>
+                        <div class="image-card white-glow-card">
+                            <img src="assets/9.jpg" alt="Local Connections">
+                        </div>
+                        <div class="image-card white-glow-card">
+                            <img src="assets/11.jpg" alt="Nightlife Encounters">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated Customer Contact & Support Help Desk Section -->
+        <section class="section support-section" id="support">
+            <div class="container text-center">
+                <h2 class="section-title display-text">Customer Support & <span class="gradient-text">Contact Info</span></h2>
+                <p class="section-subtitle">Have questions or need assistance? Our 24/7 dedicated support team is here to help.</p>
+
+                <div style="max-width: 750px; margin: 2.5rem auto 0;" class="fade-in">
+                    <!-- Support Information Channels -->
+                    <div class="support-card white-glow-card">
+                        <h3 class="display-text" style="font-size: 1.6rem; margin-bottom: 1.75rem; color: #FFF; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">Official Contact Channels</h3>
+
+                        <div class="support-channel-item">
+                            <div class="support-channel-icon">✉️</div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFF;">Customer Support Email</h4>
+                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">support@smolderswipe.com</p>
+                                <span style="font-size: 0.8rem; color: var(--color-spark-gold);">Response Time: Under 2 Hours</span>
+                            </div>
+                        </div>
+
+                        <div class="support-channel-item">
+                            <div class="support-channel-icon">🔒</div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFF;">Safety, Legal & Privacy Desk</h4>
+                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">privacy@smolderswipe.com</p>
+                                <span style="font-size: 0.8rem; color: var(--color-text-dim);">For data protection, account privacy & legal inquiries</span>
+                            </div>
+                        </div>
+
+                        <div class="support-channel-item">
+                            <div class="support-channel-icon">🕒</div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFF;">Support Hours</h4>
+                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">24 Hours / 7 Days a Week (365 Days/Year)</p>
+                            </div>
+                        </div>
+
+                        <div class="support-channel-item">
+                            <div class="support-channel-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFF;">Corporate Address</h4>
+                                <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.5;">
+                                    SmolderSwipe Media LLC<br>
+                                    100 E Pine St, Suite 400<br>
+                                    Orlando, FL 32801, USA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern White Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-wrapper">
+                        <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                        <div class="brand-info">
+                            <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                            <span class="brand-tagline">FIND YOUR SPARK</span>
+                        </div>
+                    </a>
+                    <p>Where passion meets possibility. The premier adult dating community for adventurous connections.</p>
+                    <span class="footer-18-notice">🔞 18+ Age Requirement strictly enforced</span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How it Works</a></li>
+                        <li><a href="safety.html">Safety Guidelines</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Member Login</a></li>
+                        <li><a href="contact.html">Sign Up Free</a></li>
+                        <li><a href="index.html#discover">Browse Deck</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal & Security</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="community.html">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmolderSwipe. All rights reserved. Registered trademark.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="safety.html">Safety</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

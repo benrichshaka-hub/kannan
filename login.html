@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login | SmolderSwipe Adult Dating</title>
+    <meta name="description" content="Sign in to your SmolderSwipe account and connect with local adult singles near you.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-section {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 1rem 60px;
+        }
+
+        .auth-container {
+            display: flex;
+            background: var(--color-surface-card);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .auth-image {
+            flex: 1.1;
+            display: block;
+            position: relative;
+            z-index: 2;
+            min-height: 460px;
+        }
+
+        .auth-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-card {
+            flex: 1;
+            padding: 3.5rem 2.5rem;
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .auth-image {
+                display: none;
+            }
+        }
+
+        .login-feature-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .login-img-card {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 220px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .login-img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header (White Background) -->
+    <nav id="navbar" class="sticky-nav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                <div class="brand-info">
+                    <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                    <span class="brand-tagline">FIND YOUR SPARK</span>
+                </div>
+            </a>
+            
+            <div class="age-badge">
+                <span class="pulse-dot"></span>
+                <span>18+ ADULT DATING</span>
+            </div>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle Navigation" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="contact.html" class="btn btn-ember btn-sm">Join Free 🔥</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="auth-section">
+            <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="auth-container fade-in">
+                    <!-- Login Image Side Column -->
+                    <div class="auth-image">
+                        <img src="assets/1.png" alt="SmolderSwipe Login Preview">
+                        <div style="position: absolute; bottom: 20px; left: 20px; z-index: 3;">
+                            <span class="tag-pill" style="background: rgba(255,61,0,0.85); font-weight: 800; font-size: 0.85rem;">🔥 Welcome Back Member</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-card">
+                        <h2 class="display-text" style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">
+                            Welcome <span class="gradient-text">Back</span>
+                        </h2>
+                        <p style="color: var(--color-text-muted); margin-bottom: 2rem; font-size: 0.95rem;">
+                            Sign in to access your spark matches & messages.
+                        </p>
+
+                        <form id="loginForm" action="index.html" method="POST">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-ember btn-large" style="width: 100%; margin-top: 1rem;">Member Sign In 🔥</button>
+                            
+                            <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+                                <span>Don't have an account yet?</span> 
+                                <a href="contact.html" style="color: var(--color-ember-orange); font-weight: 700; margin-left: 0.4rem;">Sign Up Free</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Featured Community Cards -->
+                <div class="login-feature-images">
+                    <div class="login-img-card white-glow-card">
+                        <img src="assets/3.png" alt="Chat & Connect">
+                    </div>
+                    <div class="login-img-card white-glow-card">
+                        <img src="assets/mm.png" alt="Spark Encounters">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern White Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-wrapper">
+                        <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                        <div class="brand-info">
+                            <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                            <span class="brand-tagline">FIND YOUR SPARK</span>
+                        </div>
+                    </a>
+                    <p>Where passion meets possibility. The premier adult dating community for adventurous connections.</p>
+                    <span class="footer-18-notice">🔞 18+ Age Requirement strictly enforced</span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How it Works</a></li>
+                        <li><a href="safety.html">Safety Guidelines</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Member Login</a></li>
+                        <li><a href="contact.html">Sign Up Free</a></li>
+                        <li><a href="index.html#discover">Browse Deck</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal & Security</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="community.html">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmolderSwipe. All rights reserved. Registered trademark.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="safety.html">Safety</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

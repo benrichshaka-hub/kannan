@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SmolderSwipe Adult Dating</title>
+    <meta name="description" content="Learn about SmolderSwipe - where desire meets reality for adventurous adults seeking authentic, discreet connections.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero-image {
+            width: 100%;
+            height: 380px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            margin: 2.5rem 0 3.5rem;
+        }
+
+        .about-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-grid-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-img-card {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 440px;
+            position: relative;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .about-img-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: var(--glow-neon-white);
+        }
+
+        .about-img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img-card:hover img {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 768px) {
+            .about-grid-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header (White Background) -->
+    <nav id="navbar" class="sticky-nav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                <div class="brand-info">
+                    <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                    <span class="brand-tagline">FIND YOUR SPARK</span>
+                </div>
+            </a>
+            
+            <div class="age-badge">
+                <span class="pulse-dot"></span>
+                <span>18+ ADULT DATING</span>
+            </div>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle Navigation" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html" class="btn btn-ember btn-sm">Join Free 🔥</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section class="section">
+            <div class="container text-center">
+                <h1 class="section-title display-text">Where Desire <span class="gradient-text">Meets Possibility</span></h1>
+                <p class="section-subtitle">We built SmolderSwipe for adventurous adults who know what they want and aren't afraid to go after it.</p>
+
+                <!-- Featured Hero Banner Image -->
+                <div class="about-hero-image white-glow-card fade-in">
+                    <img src="assets/mm.png" alt="SmolderSwipe Community">
+                    <div style="position: absolute; bottom: 25px; left: 30px; z-index: 3; text-align: left;">
+                        <span class="tag-pill" style="background: rgba(255,61,0,0.85); font-weight: 800; font-size: 0.9rem;">🔥 Over 250,000 Adventurous Members</span>
+                    </div>
+                </div>
+
+                <div class="bento-card fade-in" style="max-width: 900px; margin: 0 auto 3rem; text-align: center;">
+                    <p style="font-size: 1.15rem; color: var(--color-text-main); line-height: 1.8;">
+                        At SmolderSwipe, we believe adult dating should be thrilling, direct, and completely judgment-free. We have created a space where consenting adults can explore their desires, connect with like-minded local singles, and enjoy unforgettable encounters without pretension.
+                    </p>
+                </div>
+
+                
+
+                <!-- Images Gallery Grid -->
+                <div style="max-width: 1100px; margin: 4rem auto 0;" class="text-center">
+                    <h3 class="display-text" style="font-size: 1.85rem; margin-bottom: 0.5rem;">Authentic Connections <span class="gradient-text">Near You</span></h3>
+                    <p style="color: var(--color-text-muted); margin-bottom: 2.5rem;">Real members finding spontaneous dates and nightlife encounters every day.</p>
+
+                    <div class="about-grid-images">
+                        <div class="about-img-card white-glow-card">
+                            <img src="assets/jj.png" alt="SmolderSwipe Community Life">
+                        </div>
+                        <div class="about-img-card white-glow-card">
+                            <img src="assets/nn.png" alt="Discreet Encounters">
+                        </div>
+                        <div class="about-img-card white-glow-card">
+                            <img src="assets/a6.png" alt="Local Nightlife Dates">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-card fade-in" style="max-width: 900px; margin: 4rem auto 0; padding: 3rem 2rem;">
+                    <blockquote style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-display); color: var(--color-spark-gold); font-style: italic; margin-bottom: 1.5rem;">
+                        "Life's too short for boring dates. Let's find your spark tonight."
+                    </blockquote>
+                    <a href="contact.html" class="btn btn-ember btn-large">Join the SmolderSwipe Community 🔥</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern White Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-wrapper">
+                        <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                        <div class="brand-info">
+                            <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                            <span class="brand-tagline">FIND YOUR SPARK</span>
+                        </div>
+                    </a>
+                    <p>Where passion meets possibility. The premier adult dating community for adventurous connections.</p>
+                    <span class="footer-18-notice">🔞 18+ Age Requirement strictly enforced</span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How it Works</a></li>
+                        <li><a href="safety.html">Safety Guidelines</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Member Login</a></li>
+                        <li><a href="contact.html">Sign Up Free</a></li>
+                        <li><a href="index.html#discover">Browse Deck</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal & Security</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="community.html">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmolderSwipe. All rights reserved. Registered trademark.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="safety.html">Safety</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

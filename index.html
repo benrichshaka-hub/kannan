@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmolderSwipe | Ignite Your Desire. Find Your Spark.</title>
+    <meta name="description" content="SmolderSwipe is the adult dating platform for adventurous singles seeking exciting encounters, passionate connections, and local dates. Find your spark tonight.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav id="navbar" class="sticky-nav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                <div class="brand-info">
+                    <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                    <span class="brand-tagline">FIND YOUR SPARK</span>
+                </div>
+            </a>
+            
+            <div class="age-badge">
+                <span class="pulse-dot"></span>
+                <span>18+ ADULT DATING</span>
+            </div>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle Navigation" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html" class="btn btn-ember btn-sm">Join Free 🔥</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-ambient-glow"></div>
+            <div class="container hero-split">
+                <div class="hero-text-col fade-in">
+                    <div class="hero-live-tag">
+                        <span>⚡ Active Local Community Online</span>
+                    </div>
+                    <h1 class="hero-title display-text">
+                        Ignite Your Desire. <br><span class="gradient-text">Find Your Spark.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        SmolderSwipe connects adventurous adults for exciting encounters, spontaneous dates, and passionate connections near you.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-ember btn-large">Find Singles Near Me 🔥</a>
+                        <a href="#discover" class="btn btn-outline btn-large">Browse Deck</a>
+                    </div>
+
+                    <!-- Quick Match Filter -->
+                    <div class="hero-quick-search">
+                        <div class="search-field">
+                            <label>I Am A</label>
+                            <select id="search-gender">
+                                <option value="man">Man</option>
+                                <option value="woman">Woman</option>
+                                <option value="couple">Couple</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label>Seeking</label>
+                            <select id="search-seeking">
+                                <option value="woman">Women</option>
+                                <option value="man">Men</option>
+                                <option value="everyone">Everyone</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label>Age Range</label>
+                            <select id="search-age">
+                                <option value="18-25">18 - 25</option>
+                                <option value="26-35" selected>26 - 35</option>
+                                <option value="36-45">36 - 45</option>
+                                <option value="46+">46+</option>
+                            </select>
+                        </div>
+                        <div style="align-self: flex-end;">
+                            <a href="#discover" class="btn btn-ember btn-sm">Spark Match</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Column (Interactive Swipe Deck Preview) -->
+                <div class="hero-visual-col fade-in">
+                    <div class="swipe-deck-container">
+                        <!-- Background stack cards -->
+                        <div class="swipe-card card-bg-1" id="hero-card-bg-1">
+                            <img src="assets/jkjk.png" alt="Sofia">
+                        </div>
+                        <div class="swipe-card card-bg-2" id="hero-card-bg-2">
+                            <img src="assets/boy1.png" alt="Jake">
+                        </div>
+                        
+                        <!-- Active Foreground Card -->
+                        <div class="swipe-card active-card" id="hero-active-card">
+                            <img src="assets/a1.png" alt="Alexa - SmolderSwipe">
+                            <div class="swipe-card-info">
+                                <div class="swipe-card-header">
+                                    <h3 class="card-name display-text">Alexa, 28</h3>
+                                    <span class="spark-match-badge">98% Spark Match</span>
+                                </div>
+                                <p style="color: var(--color-text-muted); font-size: 0.9rem;">Looking for Fun • 2 miles away</p>
+                                <div class="card-tags">
+                                    <span class="tag-pill">Spontaneous</span>
+                                    <span class="tag-pill">Late Night Drinks</span>
+                                    <span class="tag-pill">No Drama</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Swipe Action Controls -->
+                        <div class="swipe-controls">
+                            <button id="card-pass-btn" class="control-btn btn-pass" title="Pass">👎</button>
+                            <button id="card-super-btn" class="control-btn btn-super" title="Super Spark">⚡</button>
+                            <button id="card-like-btn" class="control-btn btn-like" title="Spark Like">🔥</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="container">
+                <div class="hero-stats fade-in">
+                    <div class="stat-item">
+                        <div class="stat-number display-text gradient-text">250K+</div>
+                        <div class="stat-label">Active Local Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number display-text gold-text">4.9 / 5.0</div>
+                        <div class="stat-label">Member Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number display-text gradient-text">50K+</div>
+                        <div class="stat-label">Daily Encounters</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Discovery ("Smolder Deck") -->
+        <section id="discover" class="section">
+            <div class="container text-center">
+                <h2 class="section-title display-text">Local Singles <span class="gradient-text">Ready to Connect</span></h2>
+                <p class="section-subtitle">Browse profile cards of members near your location ready for dates and exciting encounters.</p>
+
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-filter="all">All Profiles 🔥</button>
+                    <button class="tab-btn" data-filter="online">Online Now 🟢</button>
+                    <button class="tab-btn" data-filter="near">Near Me 📍</button>
+                </div>
+
+                <!-- Discover Cards Grid -->
+                <div class="discover-grid">
+                    <!-- Profile 1 -->
+                    <div class="discover-card" data-category="online">
+                        <img src="assets/a3.png" alt="Alexa">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Alexa, 28</h3>
+                            <p class="discover-sub">Looking for Fun • 2 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill" style="background: rgba(255,61,0,0.2); color: var(--color-spark-gold);">Online Now</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 2 -->
+                    <div class="discover-card" data-category="near">
+                        <img src="assets/boy1.png" alt="Jake">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Jake, 31</h3>
+                            <p class="discover-sub">Adventure Seeker • 3 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill">Casual Dates</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 3 -->
+                    <div class="discover-card" data-category="online">
+                        <img src="assets/jkjk.png" alt="Sofia">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Sofia, 26</h3>
+                            <p class="discover-sub">No Strings Attached • 1 mile away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill" style="background: rgba(255,61,0,0.2); color: var(--color-spark-gold);">99% Match</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 4 -->
+                    <div class="discover-card" data-category="online">
+                        <img src="assets/boy2.png" alt="Marcus">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Marcus, 34</h3>
+                            <p class="discover-sub">Night Life • 4 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill">Online Now</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 5 -->
+                    <div class="discover-card" data-category="near">
+                        <img src="assets/jeu.png" alt="Maya">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Maya, 29</h3>
+                            <p class="discover-sub">Spontaneous • 2 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill">Casual Fun</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 6 -->
+                    <div class="discover-card" data-category="near">
+                        <img src="assets/cf.png" alt="Ryan">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Ryan, 33</h3>
+                            <p class="discover-sub">Open Minded • 5 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill">Active Member</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 7 -->
+                    <div class="discover-card" data-category="online">
+                        <img src="assets/a4.png" alt="Isabella">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Isabella, 30</h3>
+                            <p class="discover-sub">Spice Things Up • 3 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill" style="background: rgba(255,61,0,0.2); color: var(--color-spark-gold);">Online Now</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile 8 -->
+                    <div class="discover-card" data-category="near">
+                        <img src="assets/a2.png" alt="Chris">
+                        <div class="discover-overlay">
+                            <h3 class="discover-title">Chris, 30</h3>
+                            <p class="discover-sub">Tonight Only • 2 miles away</p>
+                            <div class="discover-actions">
+                                <span class="tag-pill">Active Today</span>
+                                <button class="spark-btn">Spark 🔥</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3.5rem;">
+                    <a href="contact.html" class="btn btn-ember btn-large">Join & Browse All Local Singles 🔥</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Features Grid Section -->
+        <section id="features" class="section" style="background: var(--color-surface-dark);">
+            <div class="container text-center">
+                <h2 class="section-title display-text">Why Choose <span class="gradient-text">SmolderSwipe</span></h2>
+                <p class="section-subtitle">Designed for discreet adult dating with clear preferences, easy matching, and mutual desire.</p>
+
+                <div class="bento-grid">
+                    <div class="bento-card bento-wide fade-in">
+                    
+                        <h3>Instant Spark Matching</h3>
+                        <p>Our smart algorithm matches your preferences, location radius, and lifestyle vibes so you connect with local singles seeking similar experiences.</p>
+                    </div>
+
+                    <div class="bento-card fade-in">
+                     
+                        <h3>Discreet & Private Controls</h3>
+                        <p>Your privacy is respected. Private profile modes, secure messaging, and subtle billing descriptors keep your personal life confidential.</p>
+                    </div>
+
+                    <div class="bento-card fade-in">
+                      
+                        <h3>Active Adult Community</h3>
+                        <p>Connect with real local members seeking casual dating, nightlife dates, and exciting encounters.</p>
+                    </div>
+
+                    <div class="bento-card bento-wide fade-in">
+                       
+                        <h3>Direct Local Encounters</h3>
+                        <p>Connect directly with active members nearby who are ready to meet up for drinks and dates tonight.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Spark Quiz / Match Calculator -->
+        <section class="section quiz-section">
+            <div class="container text-center">
+                <h2 class="section-title display-text">Find Your <span class="gradient-text">Ideal Match</span></h2>
+                <p class="section-subtitle">Take our quick Spark Calculator to discover compatible singles in your area.</p>
+
+                <div class="quiz-card" id="spark-quiz-card">
+                    <div class="quiz-steps-indicator">
+                        <div class="step-dot active"></div>
+                        <div class="step-dot"></div>
+                        <div class="step-dot"></div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="quiz-step" id="quiz-step-1">
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Step 1: What is your primary vibe?</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Select what best describes your current dating mood:</p>
+
+                        <div class="quiz-options-grid">
+                            <div class="option-card selected">
+                                <span class="option-icon">🔥</span>
+                                <span class="option-title">Casual & Spontaneous Fun</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">🍸</span>
+                                <span class="option-title">Late Night Drinks & Date</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">💋</span>
+                                <span class="option-title">Discreet Encounters</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">✨</span>
+                                <span class="option-title">Open Minded Exploration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="quiz-step" id="quiz-step-2" style="display: none;">
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Step 2: Who are you seeking?</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Choose your target match preferences:</p>
+
+                        <div class="quiz-options-grid">
+                            <div class="option-card selected">
+                                <span class="option-icon">💃</span>
+                                <span class="option-title">Adventurous Women</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">🕺</span>
+                                <span class="option-title">Exciting Men</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">🥂</span>
+                                <span class="option-title">Couples & Groups</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">⭐</span>
+                                <span class="option-title">Everyone</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="quiz-step" id="quiz-step-3" style="display: none;">
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Step 3: Preferred Location Distance?</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">How far are you willing to travel tonight?</p>
+
+                        <div class="quiz-options-grid">
+                            <div class="option-card selected">
+                                <span class="option-icon">📍</span>
+                                <span class="option-title">Within 5 Miles</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">🚗</span>
+                                <span class="option-title">Within 15 Miles</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">🌆</span>
+                                <span class="option-title">Entire City Area</span>
+                            </div>
+                            <div class="option-card">
+                                <span class="option-icon">✈️</span>
+                                <span class="option-title">Travel & Anywhere</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <button id="quiz-next-btn" class="btn btn-ember btn-large">Next Step →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel -->
+        <section id="about" class="section">
+            <div class="container text-center">
+                <h2 class="section-title display-text">Real Stories, <span class="gradient-text">Real Sparks</span></h2>
+                <p class="section-subtitle">Discover how adventurous adults are meeting, dating, and turning up the heat on SmolderSwipe.</p>
+
+                <div class="testimonial-container">
+                    <div class="testimonial-card active">
+                        <img src="assets/a1.png" alt="Elena" class="testimonial-avatar">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote-text">"I was hesitant at first, but SmolderSwipe exceeded all my expectations! Joined on Friday evening and met an amazing guy for late-night cocktails within 2 hours. Pure spark!"</p>
+                        <div class="author-info">Elena, 27</div>
+                        <div class="author-meta">Miami, FL • Verified Member</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="assets/boy1.png" alt="Marcus" class="testimonial-avatar">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote-text">"Hands down the best adult dating app out there. Direct, discreet, and packed with active local singles who actually want to meet up for spontaneous nightlife dates."</p>
+                        <div class="author-info">Marcus, 32</div>
+                        <div class="author-meta">Austin, TX • Verified Member</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="assets/a3.png" alt="Sophia" class="testimonial-avatar">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote-text">"The Spark Deck is so intuitive! matched with a great guy, grabbed drinks downtown, and had an unforgettable night. The discreet privacy controls are top tier."</p>
+                        <div class="author-info">Sophia, 29</div>
+                        <div class="author-meta">Chicago, IL • Verified Member</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="assets/a4.png" alt="Isabella" class="testimonial-avatar">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote-text">"No time wasting and no endless back-and-forth messaging. The match algorithm paired me with like-minded singles nearby right away. Highly recommend!"</p>
+                        <div class="author-info">Isabella, 26</div>
+                        <div class="author-meta">Los Angeles, CA • Verified Member</div>
+                    </div>
+
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="car-prev" aria-label="Previous">&larr;</button>
+                        <button class="carousel-btn" id="car-next" aria-label="Next">&rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section id="faq" class="section" style="background: var(--color-surface-dark);">
+            <div class="container">
+                <h2 class="section-title text-center display-text">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="section-subtitle text-center">Everything you need to know about joining and using SmolderSwipe.</p>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is SmolderSwipe free to create an account?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Creating your account, setting your preferences, browsing profiles, and calculating matches is 100% free.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What are the age requirements for joining?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All members must be at least 18 years of age (or the age of legal majority). Age verification via date of birth confirmation is required during account sign-up.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does SmolderSwipe protect member privacy?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We use encrypted data connections, anonymous profile display options, and discreet bank billing descriptors so your personal life stays confidential.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How quickly can I connect with local members?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most members start connecting with matches within minutes of creating their profile. Use our filter tabs and Spark tools to find local members!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-card fade-in">
+                    <h2 class="cta-title display-text">Ready to <span class="gradient-text">Find Your Spark?</span></h2>
+                    <p class="cta-subtitle">Join active local members near you. Create your free account with age verification in less than 60 seconds.</p>
+                    <a href="contact.html" class="btn btn-ember btn-large">Create Free Account 🔥</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern Dark Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-wrapper">
+                        <img src="assets/logo.png" alt="SmolderSwipe Logo" class="brand-logo-img">
+                        <div class="brand-info">
+                            <span class="brand-name display-text">Smolder<span>swipe</span></span>
+                            <span class="brand-tagline">FIND YOUR SPARK</span>
+                        </div>
+                    </a>
+                    <p>Where passion meets possibility. The premier adult dating community for adventurous connections.</p>
+                    <span class="footer-18-notice">🔞 18+ Age Requirement strictly enforced</span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How it Works</a></li>
+                        <li><a href="safety.html">Safety Guidelines</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Member Login</a></li>
+                        <li><a href="contact.html">Sign Up Free</a></li>
+                        <li><a href="index.html#discover">Browse Deck</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal & Security</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="community.html">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmolderSwipe. All rights reserved. Registered trademark.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="safety.html">Safety</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
